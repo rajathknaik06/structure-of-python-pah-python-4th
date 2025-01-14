@@ -1,0 +1,38 @@
+"""Liam and his friends are sharing the cost of a group purchase. The total cost of the purchase is subject to a 10% discount. One of the friends receives a 35% bonus, which means they will pay a larger portion of the discounted cost. The remaining cost is then divided equally among the other friends.
+
+
+
+Write a program to:
+
+
+
+Calculate the total cost after applying a 10% discount.
+Determine the amount paid by the friend who receives a 35% bonus.
+Calculate the amount each of the other friends will pay.
+Input format :
+The first line of input consists of a float value f, representing the total cost.
+
+The second line contains an integer value n, representing the total number of friends.
+
+Output format :
+The first line of output displays "Cost after a 10% discount: " followed by the discounted cost of the ticket package as a float value formatted to two decimal places.
+
+The second line of output displays "Friend with a 35% bonus pays: " followed by the amount paid by the friend with the bonus as a float value formatted to two decimal places.
+
+The third line of output displays "Each of the other friends pays: " followed by the individual share of the remaining cost as a float value formatted to two decimal places.
+
+ """
+
+# You are using Python
+total_cost = float(input())
+num_of_frd = int(input())
+
+discounted_cost = total_cost - (0.1 * total_cost)
+print(f"Cost after a 10% discount: {discounted_cost:.2f}")
+
+amount_paid_by_friend = 0.35 * discounted_cost
+print(f"Friend with a 35% bonus pays: {amount_paid_by_friend:.2f}")
+
+remaining_cost = discounted_cost - amount_paid_by_friend
+individual_sharing =  remaining_cost / (num_of_frd - 1)
+print(f"Each of the other friends pays: {individual_sharing:.2f}")
